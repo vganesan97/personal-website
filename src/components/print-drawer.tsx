@@ -24,8 +24,8 @@ export const PrintDrawer = () => {
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
+            <DrawerTitle>Move Gosdfsdal</DrawerTitle>
+            <DrawerDescription>Set youzzzzr daily xxxxactivity goal.</DrawerDescription>
           </DrawerHeader>
           <div className="p-4 pb-0"></div>
           <DrawerFooter>

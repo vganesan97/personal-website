@@ -24,16 +24,16 @@ export default function Page() {
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
-              <a
-                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={RESUME_DATA.locationLink}
-                target="_blank"
-              >
-                <GlobeIcon className="h-3 w-3" />
-                {RESUME_DATA.location}
-              </a>
-            </p>
+            {/*<p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">*/}
+            {/*  <a*/}
+            {/*    className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"*/}
+            {/*    href={RESUME_DATA.locationLink}*/}
+            {/*    target="_blank"*/}
+            {/*  >*/}
+            {/*    <GlobeIcon className="h-3 w-3" />*/}
+            {/*    {RESUME_DATA.location}*/}
+            {/*  </a>*/}
+            {/*</p>*/}
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
@@ -95,9 +95,12 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
+                      {work.link ?
+                        <a className="hover:underline" href={work.link}>
+                          {work.company}
+                        </a>
+                          : work.company
+                      }
 
                       <span className="inline-flex gap-x-1">
                         {work.badges.map((badge) => (
@@ -111,9 +114,16 @@ export default function Page() {
                         ))}
                       </span>
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
-                    </div>
+                    {
+                      work.end ?
+                          <div className="text-sm tabular-nums text-gray-500">
+                            {work.start} - {work.end}
+                          </div>
+                          : <div className="text-sm tabular-nums text-gray-500">
+                            {work.start}
+                          </div>
+                    }
+
                   </div>
 
                   <h4 className="font-mono text-sm leading-none">
@@ -123,26 +133,6 @@ export default function Page() {
                 <CardContent className="mt-2 text-xs">
                   {work.description}
                 </CardContent>
-              </Card>
-            );
-          })}
-        </Section>
-        <Section>
-          <h2 className="text-xl font-bold">Education</h2>
-          {RESUME_DATA.education.map((education) => {
-            return (
-              <Card key={education.school}>
-                <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
-                      {education.school}
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
-                      {education.start} - {education.end}
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="mt-2">{education.degree}</CardContent>
               </Card>
             );
           })}
@@ -171,6 +161,27 @@ export default function Page() {
               );
             })}
           </div>
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Education</h2>
+          {RESUME_DATA.education.map((education) => {
+            return (
+                <Card key={education.school}>
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-x-2 text-base">
+                      <h3 className="font-semibold leading-none">
+                        {education.school}
+                      </h3>
+                      <div className="text-sm tabular-nums text-gray-500">
+                        {education.start} - {education.end}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="mt-2">{education.degree}</CardContent>
+                </Card>
+            );
+          })}
         </Section>
       </section>
 
