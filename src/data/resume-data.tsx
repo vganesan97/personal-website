@@ -164,7 +164,10 @@ export const RESUME_DATA = {
       description:
         "Browser extension that groups tabs into a customizable number of categories.  Uses LLMs to dynamically create categories.",
       logo: MonitoLogo,
-      link: null,
+      link: {
+        label: null,
+        href: "https://github.com/vganesan97/tab-grouper-extension",
+      },
     },
     {
       title: "AuctionX",
