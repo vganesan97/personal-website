@@ -42,13 +42,6 @@ export default function Page() {
                   </Button>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <Button className="h-8 w-8" variant="outline" size="icon">
-                    <PhoneIcon className="h-4 w-4" />
-                  </Button>
-                </a>
-              ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -66,11 +59,6 @@ export default function Page() {
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
             </div>
@@ -150,13 +138,14 @@ export default function Page() {
           <h2 className="text-xl font-bold">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
+              // @ts-ignore
               return (
                 <ProjectCard
                   key={project.title}
                   title={project.title}
                   description={project.description}
                   tags={project.techStack}
-                  link={"link" in project ? project.link.href : undefined}
+                  link={project.link ? project.link.href : undefined}
                 />
               );
             })}
@@ -187,10 +176,10 @@ export default function Page() {
 
       <CommandMenu
         links={[
-          {
-            url: RESUME_DATA.personalWebsiteUrl,
-            title: "Personal Website",
-          },
+          // {
+          //   url: RESUME_DATA.personalWebsiteUrl,
+          //   title: "Personal Website",
+          // },
           ...RESUME_DATA.contact.social.map((socilaMediaLink) => ({
             url: socilaMediaLink.url,
             title: socilaMediaLink.name,

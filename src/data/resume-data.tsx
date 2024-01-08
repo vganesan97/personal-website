@@ -24,16 +24,15 @@ export const RESUME_DATA = {
   name: "Vishaal Ganesan",
   initials: "VG",
   location: "New York, NY",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  // locationLink: "https://www.google.com/maps/place/Wrocław",
   about:
     "Software Engineer passionate about solving challenging problems and building great products.",
   summary:
   "I'm a full stack engineer with over 4 years of experience building scalable web applications and backend services.  My experience includes stints at small startups, mid size, and large companies.  Currently, I'm passionate about building developer tools, user facing applications, and tools that support AI workflows.  I'm always looking to learn/apply new technologies and tackle interesting problems. Send me an email if you're interested in working together or chatting!",
   avatarUrl: "https://avatars.githubusercontent.com/u/14083307?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  personalWebsiteUrl: null,
   contact: {
     email: "vishaal.kganesan@gmail.com",
-    // tel: "+16094624702",
     social: [
       {
         name: "GitHub",
@@ -63,7 +62,7 @@ export const RESUME_DATA = {
   work: [
     {
       company: "Freelance and Contract Development",
-      // link: "https://vroomdelivery.com",
+      link: null,
       badges: ["Remote"],
       title: "Software Engineer",
       logo: ParabolLogo,
@@ -101,7 +100,7 @@ export const RESUME_DATA = {
       title: "Solutions Architect Intern",
       logo: JojoMobileLogo,
       start: "Summer 2019",
-      //end: "2019",
+      end: null,
       description: "Designed and built a web application that allows users to sandbox their setup for AWS IoT."
     },
     {
@@ -121,7 +120,7 @@ export const RESUME_DATA = {
       title: "Software Engineer Intern",
       logo: NSNLogo,
       start: "Summer/Fall 2017",
-      //end: "Dec 2017",
+      end: null,
       description: "Built a web interface for archivists to search through thousands of hand written documents.",
     },
   ],
@@ -155,7 +154,7 @@ export const RESUME_DATA = {
       description: "Track the content you’re consuming and get a weekly curated content feed from tv, movies, podcasts, and music.",
       logo: ConsultlyLogo,
       link: {
-        // label: "consultly.com",
+        label: null,
         href: "https://github.com/vganesan97/vidbox",
       },
     },
@@ -165,10 +164,7 @@ export const RESUME_DATA = {
       description:
         "Browser extension that groups tabs into a customizable number of categories.  Uses LLMs to dynamically create categories.",
       logo: MonitoLogo,
-      // link: {
-      //   label: "monito.dev",
-      //   href: "https://monito.dev/",
-      // },
+      link: null,
     },
     {
       title: "AuctionX",
@@ -177,7 +173,7 @@ export const RESUME_DATA = {
         "Decentralized auction platform built on Corda that enables trustless bidding and escrow services for digital goods.",
       logo: JarockiMeLogo,
       link: {
-        // label: "github.com",
+        label: "github.com",
         href: "https://github.com/vganesan97/CSDE-cordapp-stockx",
       },
     },
@@ -186,11 +182,8 @@ export const RESUME_DATA = {
       techStack: ["Python", "Hugging Face", "OpenAI", "React"],
       description:
         "Filter specific shots from tennis YouTube videos to create highlight reels automatically.",
-      logo: Minimal,
-      // link: {
-      //   label: "useminimal.com",
-      //   href: "https://useminimal.com/",
-      // },
+      // logo: Minimal,
+      link: null,
     },
     {
       title: "PetGo",
@@ -198,20 +191,14 @@ export const RESUME_DATA = {
       description:
         "Match verified and background checked pet sitters to pet owners for long term care.",
       // logo: BarepapersLogo,
-      // link: {
-      //   label: "barepapers.com",
-      //   href: "https://barepapers.com/",
-      // },
+      link: null,
     },
     {
       title: "Rest Finder",
       techStack: ["Side Project", "TypeScript", "Next.js", "Kotlin", "Python", "Spring", "GCP", "OpenAI", "Postgres"],
       description: "Find, reserve, and review restrooms around your area using a web app.",
       // logo: YearProgressLogo,
-      // link: {
-      //   label: "getyearprogress.com",
-      //   href: "https://getyearprogress.com/",
-      // },
+      link: null,
     }
   ],
 } as const;
