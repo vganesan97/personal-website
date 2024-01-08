@@ -160,7 +160,7 @@ export const RESUME_DATA = {
     },
     {
       title: "Tab Grouper",
-      techStack: ["Side Project", "JavaScript", "AWS Lambda", "Hugging Face", "Browser Extension", "OpenAI"],
+      techStack: ["Side Project", "JavaScript", "AWS Lambda", "Hugging Face", "Browser Extension", "OpenAI", "Redis"],
       description:
         "Browser extension that groups tabs into a customizable number of categories.  Uses LLMs to dynamically create categories.",
       logo: MonitoLogo,
