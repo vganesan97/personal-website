@@ -80,7 +80,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "2022",
       description: "\n" +
-          "Designed intuitive interfaces, implemented real-time logging for faster issue resolution, built a flexible promotions systems, and personalized product recommendations, dramatically enhancing the customer experience through smoother checkouts, quicker problem-solving, increased bundled sales, and doubled purchase rates."
+          "Designed intuitive interfaces, implemented real-time logging for faster issue resolution, built a flexible promotions system, and personalized product recommendations, dramatically enhancing the customer experience through smoother checkouts, quicker problem-solving, increased bundled sales, and doubled purchase rates."
     },
     {
       company: "R3",
