@@ -20,7 +20,7 @@ export default function Page() {
       <section className="mx-auto w-full max-w-4.5xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-4xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className="text-[37px] font-bold">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-lg text-muted-foreground">
               {RESUME_DATA.about}
             </p>
@@ -82,7 +82,7 @@ export default function Page() {
               <Card key={work.company}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 text-lg font-semibold leading-none">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 text-xl font-semibold leading-none">
                       {work.link ?
                         <a className="hover:underline" href={work.link}>
                           {work.company}
@@ -159,7 +159,7 @@ export default function Page() {
                 <Card key={education.school}>
                   <CardHeader>
                     <div className="flex items-center justify-between gap-x-2 text-base">
-                      <h3 className="font-semibold leading-none">
+                      <h3 className="font-semibold leading-none text-lg">
                         {education.school}
                       </h3>
                       <div className="text-md tabular-nums text-gray-500">
